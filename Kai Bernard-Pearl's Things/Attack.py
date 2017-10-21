@@ -16,17 +16,19 @@ class Character:
         self.atkpow = 5
         self.hp = 100
         self.limit = limit
-        atack1 = Atk(5,90,15,"weapon","none")
-        atack2 = Atk(10,75,7,"magic","burn")
-        atack3 = Atk(random.randint(5,40),60,5)
+        atack1 = Atk(5, 90, 15, "weapon", "none")
+        atack2 = Atk(10, 75, 7, "magic", "burn")
+        atack3 = Atk(random.randint(20, 40), 60, 5, "melee", "confuse")
+
 
 class Atk:
-    def __init__(self,dmg,hitmiss,atklmt,atktype,atkeffect):
+    def __init__(self, dmg, hitmiss, atklmt, atktype, atkeffect):
         self.dmg = dmg
         self.hitmiss = hitmiss
         self.limit = atklmt
         self.type = atktype
         self.stateffect = atkeffect
+
 
 atkcounter1 = 0
 atkcounter2 = 0
@@ -43,7 +45,7 @@ elif choice == "b" or choice == "B":
     atkcounter2 = atkcounter2 + 1
     atkspermatch = atkspermatch + 1
 elif choice == "c" or choice == "C":
-    atkchoice = Character(random.randint(5, 25), 5)
+    atkchoice = Character(random.randint(30, 50), 5)
     atkcounter3 = atkcounter3 + 1
     atkspermatch = atkspermatch + 1
 
@@ -57,6 +59,6 @@ def fightfomula(x, y):
 print("Character dealt " + str(fightfomula(blob, atkchoice)[1]) + " hp. Blob is now at " + str(
     fightfomula(blob, atkchoice)[0]) + " hp")
 
-
-def atklimit(x, y, z):
+'''def atklimit(x, y, z):
     if x == atkcounter1:
+'''
